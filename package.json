@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/rthor/apis-cinema/issues"
   },
-  "homepage": "https://github.com/rthor/apis-cinema"
+  "homepage": "https://github.com/rthor/apis-cinema",
+  "dependencies": {
+    "request": "~2.31.0"
+  }
 }
