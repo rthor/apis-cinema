@@ -2,6 +2,7 @@ module.exports = [
     {
         "id": 1,
         "name": "Smárabíó",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/smarabio.jpg",
         "address\t": "Smáralind",
         "city": "201 Kópavogur",
         "phone": "564-0000",
@@ -12,6 +13,7 @@ module.exports = [
     {
         "id": 2,
         "name": "Háskólabíó",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/haskolabio.jpg",
         "address\t": "Hagatorgi",
         "city": "107 Reykjavík",
         "phone": "530-1919",
@@ -22,6 +24,7 @@ module.exports = [
     {
         "id": 3,
         "name": "Borgarbíó",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/borgarbio.jpg",
         "address\t": "Hólabraut 12",
         "city": "600 Akureyri",
         "phone": "462-2602",
@@ -32,6 +35,7 @@ module.exports = [
     {
         "id": 4,
         "name": "Laugarásbíó",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/laugarasbio.jpg",
         "address\t": "Laugarási",
         "city": "104 Reykjavík",
         "phone": "553-2075",
@@ -42,6 +46,7 @@ module.exports = [
     {
         "id": 5,
         "name": "Bíó Paradís",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/bioparadis.jpg",
         "address\t": "Hverfisgötu 54",
         "city": "Reykjavík",
         "phone": null,
@@ -52,6 +57,7 @@ module.exports = [
     {
         "id": 6,
         "name": "Álfabakki",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/alfabakki.jpg",
         "address\t": "Álfabakka",
         "city": "109 Reykjavík",
         "phone": "575-8900",
@@ -62,6 +68,7 @@ module.exports = [
     {
         "id": 7,
         "name": "Kringlubíó",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/kringlan.jpg",
         "address\t": "Kringlunni 4-6",
         "city": "103 Reykjavík",
         "phone": "575-8900",
@@ -72,6 +79,7 @@ module.exports = [
     {
         "id": 8,
         "name": "Sambíóin Egilshöll",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/egilsholl.jpg",
         "address\t": "Egilshöll",
         "city": "Reykjavík",
         "phone": "575-8900",
@@ -82,6 +90,7 @@ module.exports = [
     {
         "id": 9,
         "name": "Sambíóin, Akureyri",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/nyjabio.jpg",
         "address\t": "Ráðhústorgi 8",
         "city": "600 Akureyri",
         "phone": "461-4666",
@@ -92,6 +101,7 @@ module.exports = [
     {
         "id": 10,
         "name": "Sambíóin, Selfossi",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/sambioinselfossi.jpg",
         "address\t": "Eyrarvegi 2",
         "city": "800 Selfoss",
         "phone": "575-8900",
@@ -102,6 +112,7 @@ module.exports = [
     {
         "id": 11,
         "name": "Sambíóin, Keflavík",
+        "image": "http://kvikmyndir.is/images/biohus_biosida/sambioinkeflavik.jpg",
         "address\t": "Hafnargötu 33",
         "city": "230 Keflavík",
         "phone": "421-1170",
