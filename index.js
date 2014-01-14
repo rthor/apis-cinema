@@ -1,17 +1,7 @@
 var request = require('request')
-  , theaters = require('./helpers/theaters')
+  , fixShowtime = require('./helpers/fix-showtime')
   , results = []
   , imdbBase = 'http://www.imdb.com/title/tt';
-
-function fixShowtime (showtime) {
-  showtime.theater = theaters[parseInt(showtime.cinema, 10) - 1]['name'] || '';
-  showtime.schedule = showtime.schedule.map( fixSchedule );
-  return showtime;
-}
-
-function fixSchedule (schedule) {
-  return schedule.trim();
-}
 
 exports.is = function(options, callback) {
   request.get({
