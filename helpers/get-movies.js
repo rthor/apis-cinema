@@ -4,7 +4,7 @@ module.exports = function(callback) {
     return callback(
       err || res.statusCode !== 200 ?
       new Error('Service unavailable at this moment.') :
-      JSON.parse( body ) 
+      JSON.parse( body )
     );
   });
 };
