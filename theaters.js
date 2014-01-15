@@ -1,29 +1,29 @@
+var _ = require('lodash');
+var movies = require('./helpers/get-movies');
+var theaters = require('./helpers/theaters.js');
+
 module.exports = function(options, callback) {
-  var _ = require('lodash');
-  var theaters = require('./helpers/theaters.js');
-  var url = 'http://kvikmyndir.is/api/showtimes/?key=';
-  var movies, showtimes;
+  var movieObj = {};
   
-  require('request').get(url, function (err, res, body) {
-    movies = JSON.parse( body );
+  return movies(function (movies) {
+    return callback(null, { 
+      results: _.map(theaters, function (theater) {
+        theater.movies = [];
 
-    theaters = _.map(theaters, function (theater) {
-      theater.movies = [];
+        movies.forEach(function (movie) {
+          movieObj = _.where(movie.showtimes, {cinema: '' + theater.id});
 
-      movies.forEach(function (movie) {
-        showtimes = _.where(movie.showtimes, {cinema: '' + theater.id});
+          if (movieObj.length) {
+            movieObj = movieObj[0];
+            movieObj.title = movie.title;
+            movieObj.schedule = _.map(movieObj.schedule, function(time) { return time.trim(); });
+            delete movieObj.cinema; 
+            theater.movies.push( movieObj );
+          }
+        });
 
-        if (showtimes.length) {
-          showtimes = showtimes[ 0 ]
-          showtimes.title = movie.title;
-          theater.movies.push( showtimes );
-        }
-      });
-
-      return theater;
+        return theater;
+      })
     });
-
-    callback(null, { results: theaters });
   });
-
 };

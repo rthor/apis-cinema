@@ -1,9 +1,10 @@
+var movies = require('./helpers/get-movies');
+
 module.exports = function(options, callback) {
   var results = [];
-  var url = 'http://kvikmyndir.is/api/showtimes/?key=';
-  
-  require('request').get(url, function parseData (err, movies, body) {
-    JSON.parse( body ).forEach(function (movie, i) {
+
+  movies(function (movies) {
+    movies.forEach(function (movie) {
       results.push({
         title: movie.title,
         released: movie.year,
