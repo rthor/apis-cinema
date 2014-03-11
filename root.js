@@ -1,10 +1,9 @@
 var getMovies = require('./helpers/get-movies');
+var results = [];
 
-module.exports = function(options, callback) {
-  var results = [];
-
-  getMovies(function (movies) {
-    movies.forEach(function (movie) {
+module.exports = function(config, cb) {
+  getMovies(function parseMovies (movies) {
+    movies.forEach(function iterateMovies (movie) {
       results.push({
         title: movie.title,
         released: movie.year,
@@ -18,6 +17,6 @@ module.exports = function(options, callback) {
       });
     });
 
-    callback(null, { results: results });
+    cb(null, { results: results });
   });
 };
