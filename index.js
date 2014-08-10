@@ -1,2 +1,1 @@
-exports.root = require('./root');
-exports.theaters = require('./theaters');
+module.exports = function(app, prefix) {};
